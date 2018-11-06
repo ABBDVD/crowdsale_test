@@ -105,12 +105,6 @@ contract Crowdsale {
     _postValidatePurchase(_beneficiary, weiAmount);
   }
 
-  function fuzz_always_true_crowdsaleNotNull() public view returns (bool) {
-    if (token.balanceOf(address(this)) == 0) {
-        return false;
-    }
-    return true;
-  }
 
   // -----------------------------------------
   // Internal interface (extensible)
